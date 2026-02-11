@@ -22,6 +22,12 @@ const Home = () => {
     }
   };
 
+  const resetHandler = () => {
+    setuploadImage(null);
+    setenhancedImage(null);
+    setloading(false);
+  };
+
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <ImageUpload UploadImageHandler={UploadImageHandler}/>
@@ -29,6 +35,7 @@ const Home = () => {
         loading={loading}
         uploaded={uploadImage}
         enhanced={enhancedImage?.image}
+        onReset={resetHandler}
       />
     </div>
   );
