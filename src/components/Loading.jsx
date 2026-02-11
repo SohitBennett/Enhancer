@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Loading = () => {
   return (
-    <div className="grid place-content-center bg-gray-200 px-4 py-24">
+    <div className="grid place-content-center px-4 py-24">
       <BarLoader />
     </div>
   );
@@ -35,13 +35,13 @@ const BarLoader = () => {
       }}
       initial="initial"
       animate="animate"
-      className="flex gap-1"
+      className="flex gap-2"
     >
-      <motion.div variants={variants} className="h-12 w-2 bg-purple-700" />
-      <motion.div variants={variants} className="h-12 w-2 bg-purple-700" />
-      <motion.div variants={variants} className="h-12 w-2 bg-purple-700" />
-      <motion.div variants={variants} className="h-12 w-2 bg-purple-700" />
-      <motion.div variants={variants} className="h-12 w-2 bg-purple-700" />
+      <motion.div variants={variants} className="h-16 w-4 bg-blue-500 border-2 border-black" />
+      <motion.div variants={variants} className="h-16 w-4 bg-purple-500 border-2 border-black" />
+      <motion.div variants={variants} className="h-16 w-4 bg-pink-500 border-2 border-black" />
+      <motion.div variants={variants} className="h-16 w-4 bg-yellow-400 border-2 border-black" />
+      <motion.div variants={variants} className="h-16 w-4 bg-green-500 border-2 border-black" />
     </motion.div>
   );
 };
