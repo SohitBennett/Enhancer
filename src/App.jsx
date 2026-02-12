@@ -18,7 +18,7 @@ const App = () => {
           
           <div className="text-center">
             <h1 className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 mb-3 tracking-tight">
-              AI Image Enhancer
+              Enhancer
             </h1>
             <p className="text-xl text-gray-700 font-semibold">
               Upload your image and let AI enhance it for you.
