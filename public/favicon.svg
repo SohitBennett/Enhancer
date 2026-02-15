@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#9333ea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="imageGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="128" height="128" fill="url(#bgGrad)"/>
+  
+  <!-- Main image frame with thick black border -->
+  <rect x="24" y="24" width="60" height="60" fill="url(#imageGrad)" stroke="#000" stroke-width="4"/>
+  
+  <!-- Corner marks on image (like a photo) -->
+  <line x1="28" y1="28" x2="36" y2="28" stroke="#000" stroke-width="2"/>
+  <line x1="28" y1="28" x2="28" y2="36" stroke="#000" stroke-width="2"/>
+  <line x1="80" y1="28" x2="72" y2="28" stroke="#000" stroke-width="2"/>
+  <line x1="80" y1="28" x2="80" y2="36" stroke="#000" stroke-width="2"/>
+  <line x1="28" y1="80" x2="36" y2="80" stroke="#000" stroke-width="2"/>
+  <line x1="28" y1="80" x2="28" y2="72" stroke="#000" stroke-width="2"/>
+  <line x1="80" y1="80" x2="72" y2="80" stroke="#000" stroke-width="2"/>
+  <line x1="80" y1="80" x2="80" y2="72" stroke="#000" stroke-width="2"/>
+  
+  <!-- Mountain/landscape inside image -->
+  <path d="M 32 68 L 44 48 L 56 60 L 68 44 L 76 68 Z" fill="#f97316" stroke="#000" stroke-width="2"/>
+  <circle cx="66" cy="38" r="4" fill="#fef08a" stroke="#000" stroke-width="2"/>
+  
+  <!-- Enhancement sparkles/stars -->
+  <!-- Top right star -->
+  <g transform="translate(96, 32)">
+    <path d="M 0,-8 L 2,-2 L 8,0 L 2,2 L 0,8 L -2,2 L -8,0 L -2,-2 Z" fill="#fef08a" stroke="#000" stroke-width="2"/>
+  </g>
+  
+  <!-- Middle right star -->
+  <g transform="translate(104, 64)">
+    <path d="M 0,-6 L 1.5,-1.5 L 6,0 L 1.5,1.5 L 0,6 L -1.5,1.5 L -6,0 L -1.5,-1.5 Z" fill="#fef08a" stroke="#000" stroke-width="2"/>
+  </g>
+  
+  <!-- Bottom right star -->
+  <g transform="translate(96, 96)">
+    <path d="M 0,-7 L 1.75,-1.75 L 7,0 L 1.75,1.75 L 0,7 L -1.75,1.75 L -7,0 L -1.75,-1.75 Z" fill="#fef08a" stroke="#000" stroke-width="2"/>
+  </g>
+  
+  <!-- Enhancement arrow/beam -->
+  <path d="M 88 54 L 100 54 L 96 50 M 100 54 L 96 58" stroke="#fef08a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
