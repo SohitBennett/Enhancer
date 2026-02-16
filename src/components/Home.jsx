@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ImageUpload from "./ImageUpload";
 import ImagePreview from "./ImagePreview";
+import BeforeAfterSlider from "./BeforeAfterSlider";
 import { enhancedImageAPI } from "../utils/enhanceImageApi";
 
 const Home = () => {
@@ -37,6 +38,16 @@ const Home = () => {
         enhanced={enhancedImage?.image}
         onReset={resetHandler}
       />
+      
+      {/* Before/After Slider - Only show when both images are available */}
+      {uploadImage && enhancedImage?.image && !loading && (
+        <div className="mt-8 w-full">
+          <BeforeAfterSlider 
+            beforeImage={uploadImage} 
+            afterImage={enhancedImage.image} 
+          />
+        </div>
+      )}
     </div>
   );
 };
