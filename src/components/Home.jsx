@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import ImageUpload from "./ImageUpload";
 import ImagePreview from "./ImagePreview";
 import BeforeAfterSlider from "./BeforeAfterSlider";
+import FormatConverter from "./FormatConverter";
 import { enhancedImageAPI } from "../utils/enhanceImageApi";
 
 const Home = () => {
   const [uploadImage, setuploadImage] = useState(null);
   const [enhancedImage, setenhancedImage] = useState(null);
   const [loading, setloading] = useState(false);
+  const [uploadedFileName, setUploadedFileName] = useState("");
 
   const UploadImageHandler = async (file) => {
     setuploadImage(URL.createObjectURL(file));
+    setUploadedFileName(file.name);
     setloading(true);
     //call api to enhance image
     try{
@@ -27,6 +30,7 @@ const Home = () => {
     setuploadImage(null);
     setenhancedImage(null);
     setloading(false);
+    setUploadedFileName("");
   };
 
   return (
@@ -45,6 +49,16 @@ const Home = () => {
           <BeforeAfterSlider 
             beforeImage={uploadImage} 
             afterImage={enhancedImage.image} 
+          />
+        </div>
+      )}
+
+      {/* Format Converter - Show when enhanced image is available */}
+      {enhancedImage?.image && !loading && (
+        <div className="mt-8 w-full">
+          <FormatConverter 
+            sourceImage={enhancedImage.image}
+            sourceImageName={uploadedFileName || "enhanced-image"}
           />
         </div>
       )}

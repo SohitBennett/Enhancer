@@ -62,9 +62,10 @@
 - Colorize B&W Photos
 
 ### 10. Format Conversion
-**Status:** Planned
+**Status:** ✅ Complete (2026-02-16)
 **Priority:** Medium
-**Description:** Convert between formats (PNG, JPG, WebP, AVIF), compress with quality slider
+**Description:** Convert between formats (PNG, JPG, WebP, AVIF), compress with quality slider, resize to specific dimensions
+**Documentation:** See `FEATURE_10_IMPLEMENTATION.md`
 
 ### 11. Sharing & Export Options
 **Status:** Planned
@@ -134,9 +135,10 @@
 
 ### Phase 1 (Current Sprint)
 1. ✅ Before/After Slider Comparison
-2. Multiple Enhancement Modes
-3. Image Gallery/History
-4. Progress Indicator with Stats
+2. ✅ Format Conversion & Resizing
+3. Multiple Enhancement Modes
+4. Image Gallery/History
+5. Progress Indicator with Stats
 
 ### Phase 2
 5. Background Removal
@@ -174,5 +176,5 @@
 ---
 
 **Last Updated:** 2026-02-16
-**Current Version:** v1.0
-**Next Version:** v1.1 (with Before/After Slider)
+**Current Version:** v1.2
+**Features Completed:** Before/After Slider, Format Conversion & Resizing
