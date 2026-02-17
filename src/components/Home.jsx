@@ -3,6 +3,7 @@ import ImageUpload from "./ImageUpload";
 import ImagePreview from "./ImagePreview";
 import BeforeAfterSlider from "./BeforeAfterSlider";
 import FormatConverter from "./FormatConverter";
+import ProgressIndicator from "./ProgressIndicator";
 import { enhancedImageAPI } from "../utils/enhanceImageApi";
 
 const Home = () => {
@@ -10,11 +11,16 @@ const Home = () => {
   const [enhancedImage, setenhancedImage] = useState(null);
   const [loading, setloading] = useState(false);
   const [uploadedFileName, setUploadedFileName] = useState("");
+  const [uploadedFile, setUploadedFile] = useState(null);
+  const [processingStartTime, setProcessingStartTime] = useState(null);
 
   const UploadImageHandler = async (file) => {
     setuploadImage(URL.createObjectURL(file));
     setUploadedFileName(file.name);
+    setUploadedFile(file);
     setloading(true);
+    setProcessingStartTime(Date.now());
+    
     //call api to enhance image
     try{
         const enhancedURL = await enhancedImageAPI(file);
@@ -23,6 +29,7 @@ const Home = () => {
     } catch (error) {
         console.log(error);
         alert("Error while enhacning the image");
+        setloading(false);
     }
   };
 
@@ -31,6 +38,8 @@ const Home = () => {
     setenhancedImage(null);
     setloading(false);
     setUploadedFileName("");
+    setUploadedFile(null);
+    setProcessingStartTime(null);
   };
 
   return (
@@ -43,6 +52,16 @@ const Home = () => {
         onReset={resetHandler}
       />
       
+      {/* Progress Indicator - Show during processing and after completion */}
+      {(loading || enhancedImage) && uploadedFile && (
+        <ProgressIndicator 
+          isProcessing={loading}
+          originalFile={uploadedFile}
+          enhancedImage={enhancedImage?.image}
+          startTime={processingStartTime}
+        />
+      )}
+
       {/* Before/After Slider - Only show when both images are available */}
       {uploadImage && enhancedImage?.image && !loading && (
         <div className="mt-8 w-full">
