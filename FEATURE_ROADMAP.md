@@ -83,9 +83,9 @@
 **Description:** Quick actions (Ctrl+U for upload, Ctrl+D for download), shortcuts panel
 
 ### 13. Image Metadata Display
-**Status:** Planned
+**Status:** ✅ Complete (2026-02-17)
 **Priority:** Low
-**Description:** Show EXIF data, file size, dimensions, format, camera settings
+**Description:** Show file information, dimensions, format, technical details with expandable panel and copy-to-clipboard functionality
 
 ### 14. Presets & Templates
 **Status:** Planned
@@ -177,5 +177,5 @@
 ---
 
 **Last Updated:** 2026-02-17
-**Current Version:** v1.3
-**Features Completed:** Before/After Slider, Format Conversion & Resizing, Progress Indicator with Stats
+**Current Version:** v1.4
+**Features Completed:** Before/After Slider, Format Conversion & Resizing, Progress Indicator with Stats, Image Metadata Display

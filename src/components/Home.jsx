@@ -4,6 +4,7 @@ import ImagePreview from "./ImagePreview";
 import BeforeAfterSlider from "./BeforeAfterSlider";
 import FormatConverter from "./FormatConverter";
 import ProgressIndicator from "./ProgressIndicator";
+import ImageMetadata from "./ImageMetadata";
 import { enhancedImageAPI } from "../utils/enhanceImageApi";
 
 const Home = () => {
@@ -81,8 +82,17 @@ const Home = () => {
           />
         </div>
       )}
+
+      {/* Image Metadata - Show when image is uploaded */}
+      {uploadedFile && uploadImage && (
+        <ImageMetadata 
+          imageFile={uploadedFile}
+          imageUrl={uploadImage}
+        />
+      )}
     </div>
   );
 };
 
 export default Home;
+
