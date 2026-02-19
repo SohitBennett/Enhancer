@@ -33,9 +33,9 @@
 **Description:** Visual feedback on drop, preview thumbnails, multiple file support
 
 ### 6. Image Gallery/History
-**Status:** Planned
+**Status:** ✅ Complete (2026-02-19)
 **Priority:** High
-**Description:** Save recently enhanced images (localStorage or backend), quick access to previous work
+**Description:** Saves last 12 enhanced images in localStorage, thumbnail grid, click-to-preview, re-download, delete, clear all, animated NEW badge
 
 ### 7. Batch Processing
 **Status:** Planned
@@ -176,6 +176,6 @@
 
 ---
 
-**Last Updated:** 2026-02-17
-**Current Version:** v1.4
-**Features Completed:** Before/After Slider, Format Conversion & Resizing, Progress Indicator with Stats, Image Metadata Display
+**Last Updated:** 2026-02-19
+**Current Version:** v1.5
+**Features Completed:** Before/After Slider, Format Conversion & Resizing, Progress Indicator with Stats, Image Metadata Display, Image Gallery/History

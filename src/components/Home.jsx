@@ -5,6 +5,7 @@ import BeforeAfterSlider from "./BeforeAfterSlider";
 import FormatConverter from "./FormatConverter";
 import ProgressIndicator from "./ProgressIndicator";
 import ImageMetadata from "./ImageMetadata";
+import ImageGallery from "./ImageGallery";
 import { enhancedImageAPI } from "../utils/enhanceImageApi";
 
 const Home = () => {
@@ -90,6 +91,12 @@ const Home = () => {
           imageUrl={uploadImage}
         />
       )}
+
+      {/* Image Gallery/History - Always visible once any image has been enhanced */}
+      <ImageGallery
+        newEnhancedImage={enhancedImage?.image || null}
+        newFileName={uploadedFileName || "enhanced-image"}
+      />
     </div>
   );
 };
