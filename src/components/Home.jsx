@@ -10,6 +10,7 @@ import ManualAdjustments from "./ManualAdjustments";
 import ShareExport from "./ShareExport";
 import ZoomPan from "./ZoomPan";
 import KeyboardShortcuts from "./KeyboardShortcuts";
+import UsageStats, { recordEnhancement } from "./UsageStats";
 import { enhancedImageAPI } from "../utils/enhanceImageApi";
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
   const [uploadedFileName, setUploadedFileName] = useState("");
   const [uploadedFile, setUploadedFile] = useState(null);
   const [processingStartTime, setProcessingStartTime] = useState(null);
+  const [statsVersion, setStatsVersion] = useState(0); // bump to refresh stats
 
   // Ref forwarded to ImageUpload so keyboard shortcut U can trigger it
   const fileInputRef = useRef(null);
@@ -32,6 +34,8 @@ const Home = () => {
     try {
       const enhancedURL = await enhancedImageAPI(file);
       setenhancedImage(enhancedURL);
+      recordEnhancement(file);       // record to usage stats
+      setStatsVersion((v) => v + 1); // refresh stats panel
       setloading(false);
     } catch (error) {
       console.log(error);
@@ -128,6 +132,9 @@ const Home = () => {
           />
         )}
       </div>
+
+      {/* Usage Stats */}
+      <UsageStats triggerRefresh={statsVersion} />
 
       {/* Image Gallery */}
       <div id="gallery-section" className="w-full">
