@@ -28,9 +28,9 @@
 ## 💾 User Experience Features
 
 ### 5. Enhanced Drag & Drop Upload
-**Status:** Planned
+**Status:** ✅ Complete (2026-02-20)
 **Priority:** Medium
-**Description:** Visual feedback on drop, preview thumbnails, multiple file support
+**Description:** Real drag-and-drop with visual drag-over state, file type/size validation with error messages, thumbnail preview after selection, supported format badges
 
 ### 6. Image Gallery/History
 **Status:** ✅ Complete (2026-02-19)
@@ -176,6 +176,6 @@
 
 ---
 
-**Last Updated:** 2026-02-19
-**Current Version:** v1.6
-**Features Completed:** Before/After Slider, Format Conversion & Resizing, Progress Indicator with Stats, Image Metadata Display, Image Gallery/History, Manual Adjustment Controls
+**Last Updated:** 2026-02-20
+**Current Version:** v1.7
+**Features Completed:** Before/After Slider, Format Conversion & Resizing, Progress Indicator with Stats, Image Metadata Display, Image Gallery/History, Manual Adjustment Controls, Enhanced Drag & Drop Upload
