@@ -7,6 +7,7 @@ import ProgressIndicator from "./ProgressIndicator";
 import ImageMetadata from "./ImageMetadata";
 import ImageGallery from "./ImageGallery";
 import ManualAdjustments from "./ManualAdjustments";
+import ShareExport from "./ShareExport";
 import { enhancedImageAPI } from "../utils/enhanceImageApi";
 
 const Home = () => {
@@ -73,6 +74,15 @@ const Home = () => {
             afterImage={enhancedImage.image} 
           />
         </div>
+      )}
+
+      {/* Share & Export - Show when enhanced image is available */}
+      {uploadImage && enhancedImage?.image && !loading && (
+        <ShareExport
+          originalImage={uploadImage}
+          enhancedImage={enhancedImage.image}
+          fileName={uploadedFileName || "image"}
+        />
       )}
 
       {/* Format Converter - Show when enhanced image is available */}
