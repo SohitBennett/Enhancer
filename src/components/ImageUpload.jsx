@@ -3,13 +3,14 @@ import React, { useState, useRef, useCallback } from "react";
 const ACCEPTED_TYPES = ["image/jpeg", "image/png", "image/webp", "image/avif", "image/gif", "image/bmp"];
 const MAX_SIZE_MB = 20;
 
-const ImageUpload = ({ UploadImageHandler }) => {
+const ImageUpload = ({ UploadImageHandler, fileInputRef: externalRef }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [dragError, setDragError]   = useState("");
   const [preview, setPreview]       = useState(null);
   const [previewName, setPreviewName] = useState("");
   const [previewSize, setPreviewSize] = useState(0);
-  const inputRef = useRef(null);
+  const internalRef = useRef(null);
+  const inputRef = externalRef || internalRef; // prefer the forwarded ref
   const dragCounter = useRef(0); // track nested dragenter/leave
 
   const formatSize = (bytes) => {

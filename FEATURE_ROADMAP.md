@@ -78,9 +78,9 @@
 ## 🎨 UI/UX Enhancements
 
 ### 12. Keyboard Shortcuts
-**Status:** Planned
+**Status:** ✅ Complete (2026-02-20)
 **Priority:** Low
-**Description:** Quick actions (Ctrl+U for upload, Ctrl+D for download), shortcuts panel
+**Description:** Global keydown listener, floating ? button, modal cheat sheet, 8 shortcuts: U (upload), R (reset), D (download), C (copy), G (gallery), M (metadata), Z (zoom), ? (help)
 
 ### 13. Image Metadata Display
 **Status:** ✅ Complete (2026-02-17)
@@ -177,5 +177,5 @@
 ---
 
 **Last Updated:** 2026-02-20
-**Current Version:** v1.9
-**Features Completed:** Before/After Slider, Format Conversion & Resizing, Progress Indicator with Stats, Image Metadata Display, Image Gallery/History, Manual Adjustment Controls, Enhanced Drag & Drop Upload, Sharing & Export Options, Zoom & Pan
+**Current Version:** v2.0
+**Features Completed:** Before/After Slider, Format Conversion & Resizing, Progress Indicator with Stats, Image Metadata Display, Image Gallery/History, Manual Adjustment Controls, Enhanced Drag & Drop Upload, Sharing & Export Options, Zoom & Pan, Keyboard Shortcuts
