@@ -93,9 +93,9 @@
 **Description:** Save custom enhancement settings, quick apply buttons for common use cases
 
 ### 15. Zoom & Pan
-**Status:** Planned
+**Status:** ✅ Complete (2026-02-20)
 **Priority:** Medium
-**Description:** Zoom in to see details, pan around large images, pixel-peeper mode
+**Description:** Scroll-to-zoom, drag-to-pan, preset zoom levels (1×/2×/4×/8×), zoom slider, double-click quick zoom, checkerboard background, zoom badge overlay
 
 ---
 
@@ -177,5 +177,5 @@
 ---
 
 **Last Updated:** 2026-02-20
-**Current Version:** v1.8
-**Features Completed:** Before/After Slider, Format Conversion & Resizing, Progress Indicator with Stats, Image Metadata Display, Image Gallery/History, Manual Adjustment Controls, Enhanced Drag & Drop Upload, Sharing & Export Options
+**Current Version:** v1.9
+**Features Completed:** Before/After Slider, Format Conversion & Resizing, Progress Indicator with Stats, Image Metadata Display, Image Gallery/History, Manual Adjustment Controls, Enhanced Drag & Drop Upload, Sharing & Export Options, Zoom & Pan
