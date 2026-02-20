@@ -6,6 +6,7 @@ import FormatConverter from "./FormatConverter";
 import ProgressIndicator from "./ProgressIndicator";
 import ImageMetadata from "./ImageMetadata";
 import ImageGallery from "./ImageGallery";
+import ManualAdjustments from "./ManualAdjustments";
 import { enhancedImageAPI } from "../utils/enhanceImageApi";
 
 const Home = () => {
@@ -82,6 +83,14 @@ const Home = () => {
             sourceImageName={uploadedFileName || "enhanced-image"}
           />
         </div>
+      )}
+
+      {/* Manual Adjustments - Show when enhanced image is available */}
+      {enhancedImage?.image && !loading && (
+        <ManualAdjustments
+          sourceImage={enhancedImage.image}
+          sourceImageName={uploadedFileName || "enhanced-image"}
+        />
       )}
 
       {/* Image Metadata - Show when image is uploaded */}

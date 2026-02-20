@@ -14,9 +14,9 @@
 **Description:** Different AI enhancement options: "Sharpen", "Denoise", "Upscale 2x/4x", "Color Boost", "HDR"
 
 ### 3. Manual Adjustment Controls
-**Status:** Planned
+**Status:** ✅ Complete (2026-02-19)
 **Priority:** Medium
-**Description:** Brightness, Contrast, Saturation sliders, Filters, Crop and rotate tools
+**Description:** Brightness, Contrast, Saturation, Hue Rotate, Blur, Sepia, Grayscale, Invert sliders + 10 quick presets + live preview + canvas-based download
 
 ### 4. Image History & Undo/Redo
 **Status:** Planned
@@ -177,5 +177,5 @@
 ---
 
 **Last Updated:** 2026-02-19
-**Current Version:** v1.5
-**Features Completed:** Before/After Slider, Format Conversion & Resizing, Progress Indicator with Stats, Image Metadata Display, Image Gallery/History
+**Current Version:** v1.6
+**Features Completed:** Before/After Slider, Format Conversion & Resizing, Progress Indicator with Stats, Image Metadata Display, Image Gallery/History, Manual Adjustment Controls
